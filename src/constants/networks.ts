@@ -8,10 +8,6 @@ const QUICKNODE_RPC_URL = process.env.REACT_APP_BNB_RPC_URL
 if (typeof QUICKNODE_RPC_URL === 'undefined') {
   throw new Error(`REACT_APP_BNB_RPC_URL must be a defined environment variable`)
 }
-const QUICKNODE_RPC_URL = process.env.REACT_APP_EOS_RPC_URL
-if (typeof QUICKNODE_RPC_URL === 'undefined') {
-  throw new Error(`REACT_APP_EOS_RPC_URL must be a defined environment variable`)
-}
 
 /**
  * Fallback JSON-RPC endpoints.
@@ -144,5 +140,5 @@ export const RPC_URLS = {
   [SupportedChainId.CELO]: FALLBACK_URLS[SupportedChainId.CELO],
   [SupportedChainId.CELO_ALFAJORES]: FALLBACK_URLS[SupportedChainId.CELO_ALFAJORES],
   [SupportedChainId.BNB]: [QUICKNODE_RPC_URL, ...FALLBACK_URLS[SupportedChainId.BNB]],
-  [SupportedChainId.EOS]: [QUICKNODE_RPC_URL, ...FALLBACK_URLS[SupportedChainId.EOS]],
+  [SupportedChainId.EOS]: FALLBACK_URLS[SupportedChainId.EOS],
 }
