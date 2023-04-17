@@ -200,7 +200,7 @@ const CHAIN_INFO: ChainInfoMap = {
     logoUrl: eosLogo,
     circleLogoUrl: eosCircleLogoUrl,
     squareLogoUrl: eosSquareLogoUrl,
-    nativeCurrency: { name: 'EOS', symbol: 'EOS', decimals: 18 },
+    nativeCurrency: { name: 'BNB', symbol: 'BNB', decimals: 18 },
     defaultListUrl: EOS_LIST,
   },
   [SupportedChainId.CELO_ALFAJORES]: {
