@@ -23,6 +23,11 @@ describe('#getExplorerLink', () => {
       'https://bscscan.com/address/abc'
     )
   })
+  it('eos', () => {
+    expect(getExplorerLink(SupportedChainId.EOS, 'abc', ExplorerDataType.ADDRESS)).toEqual(
+      'https://bscscan.com/address/abc'
+    )
+  })
   it('polygon', () => {
     expect(getExplorerLink(137, 'abc', ExplorerDataType.ADDRESS)).toEqual('https://polygonscan.com/address/abc')
   })

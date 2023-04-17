@@ -68,6 +68,7 @@ export const CHAIN_ID_TO_BACKEND_NAME: { [key: number]: Chain } = {
   [SupportedChainId.OPTIMISM]: Chain.Optimism,
   [SupportedChainId.OPTIMISM_GOERLI]: Chain.Optimism,
   [SupportedChainId.BNB]: Chain.Bnb,
+  [SupportedChainId.EOS]: Chain.Eos,
 }
 
 export function chainIdToBackendName(chainId: number | undefined) {
@@ -112,6 +113,7 @@ const URL_CHAIN_PARAM_TO_BACKEND: { [key: string]: Chain } = {
   arbitrum: Chain.Arbitrum,
   optimism: Chain.Optimism,
   bnb: Chain.Bnb,
+  eos: Chain.Eos,
 }
 
 export function validateUrlChainParam(chainName: string | undefined) {
@@ -128,6 +130,7 @@ export const CHAIN_NAME_TO_CHAIN_ID: { [key in Chain]: SupportedChainId } = {
   [Chain.Arbitrum]: SupportedChainId.ARBITRUM_ONE,
   [Chain.UnknownChain]: SupportedChainId.MAINNET,
   [Chain.Bnb]: SupportedChainId.BNB,
+  [Chain.Eos]: SupportedChainId.EOS,
 }
 
 export function fromGraphQLChain(chain: Chain): SupportedChainId {
