@@ -1,10 +1,13 @@
 import bnbCircleLogoUrl from 'assets/images/bnbCircle.svg'
+import eosCircleLogoUrl from 'assets/images/bnbCircle.svg'
 import celoCircleLogoUrl from 'assets/images/celoCircle.png'
 import ethereumLogoUrl from 'assets/images/ethereum-logo.png'
 import polygonCircleLogoUrl from 'assets/images/polygonCircle.png'
 import { default as arbitrumCircleLogoUrl, default as arbitrumLogoUrl } from 'assets/svg/arbitrum_logo.svg'
 import bnbSquareLogoUrl from 'assets/svg/bnb_square_logo.svg'
+import eosSquareLogoUrl from 'assets/svg/bnb_square_logo.svg'
 import bnbLogo from 'assets/svg/bnb-logo.svg'
+import eosLogo from 'assets/svg/bnb-logo.svg'
 import celoLogo from 'assets/svg/celo_logo.svg'
 import celoSquareLogoUrl from 'assets/svg/celo_square_logo.svg'
 import optimismSquareLogoUrl from 'assets/svg/optimism_square_logo.svg'
@@ -16,7 +19,7 @@ import ms from 'ms.macro'
 import { darkTheme } from 'theme/colors'
 
 import { SupportedL1ChainId, SupportedL2ChainId } from './chains'
-import { ARBITRUM_LIST, CELO_LIST, OPTIMISM_LIST, PLASMA_BNB_LIST } from './lists'
+import { ARBITRUM_LIST, CELO_LIST, OPTIMISM_LIST, PLASMA_BNB_LIST, EOS_LIST } from './lists'
 
 export const AVERAGE_L1_BLOCK_TIME = ms`12s`
 
@@ -185,6 +188,20 @@ const CHAIN_INFO: ChainInfoMap = {
     squareLogoUrl: celoSquareLogoUrl,
     nativeCurrency: { name: 'Celo', symbol: 'CELO', decimals: 18 },
     defaultListUrl: CELO_LIST,
+  },
+  [SupportedChainId.EOS]: {
+    networkType: NetworkType.L1,
+    blockWaitMsBeforeWarning: ms`10m`,
+    bridge: 'https://www.portalbridge.com/#/transfer',
+    docs: 'https://docs.celo.org/',
+    explorer: 'https://celoscan.io/',
+    infoLink: 'https://info.uniswap.org/#/celo/',
+    label: 'EOS',
+    logoUrl: eosLogo,
+    circleLogoUrl: eosCircleLogoUrl,
+    squareLogoUrl: eosSquareLogoUrl,
+    nativeCurrency: { name: 'EOS', symbol: 'EOS', decimals: 18 },
+    defaultListUrl: EOS_LIST,
   },
   [SupportedChainId.CELO_ALFAJORES]: {
     networkType: NetworkType.L1,
